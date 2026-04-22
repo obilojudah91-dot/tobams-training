@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tobams Group – Training and Development Page
 
-## Getting Started
+A pixel-perfect, fully responsive implementation of the Frontend Intern Assessment Figma design, built with **Next.js 14 (App Router)** and **Tailwind CSS v3**.
 
-First, run the development server:
+---
+
+## Live URL
+
+> **[https://YOUR-VERCEL-URL.vercel.app](https://YOUR-VERCEL-URL.vercel.app)**
+
+---
+
+## 🔗 GitHub Repository
+
+> **[https://github.com/Obilojudah91-dot/tobams-training](https://github.com/Obilojudah91-dot/tobams-training)**
+
+---
+
+## 🔗 Figma Design Reference
+
+[Frontend Intern Assessment – Figma](https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment?node-id=0-1&p=f&t=qxnAKp4Ael8QtLYz-0)
+
+---
+
+## Stack
+
+| Tool       | Version | Purpose                           |
+|------------|---------|-----------------------------------|
+| Next.js    | 14+     | App Router, next/image, next/font |
+| Tailwind CSS | 3+   | All styling, responsive prefixes  |
+| TypeScript | 5+      | Type safety                       |
+| Vercel     | —       | Deployment                        |
+
+---
+
+## ⚙️ Setup Instructions
+
+### Prerequisites
+- Node.js 18+
+- npm
+
+### Local Development
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/YOUR-USERNAME/tobams-training.git
+cd tobams-training
+
+# 2. Install dependencies
+npm install
+
+# 3. Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 4. Open in browser
+open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Production Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+##  Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+## Design Decisions & Technical Assumptions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Responsive Breakpoints
+Used **only** Tailwind's built-in responsive prefixes (`sm:`, `md:`, `lg:`) as required by the assessment. No custom `@media` queries were written anywhere in the codebase.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **425px (mobile):** Single-column layout, hamburger menu, stacked footer
+- **768px (tablet):** Two-column grids activate, full navbar visible
+- **1280px+ (desktop):** Full layout with max-width containers
 
-## Deploy on Vercel
+### Images
+- All images use `next/image` with `fill` and `sizes` props for automatic optimization
+- Placeholder images sourced from Unsplash to match the stock photography style of the Figma design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Fonts
+- Loaded via `next/font/google` — zero layout shift, self-hosted automatically by Next.js
+- `Merriweather` for all headings
+- `Nunito Sans` for body text
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Tailwind Only
+No inline styles were used. All styling is done exclusively through Tailwind utility classes as required.
+
+### Minor Deviations from Figma
+1. **Testimonials:** Implemented as a responsive CSS grid that collapses on mobile rather than a pure JS carousel — this is more accessible and keyboard-navigable while maintaining the same visual result on desktop.
+2. **Placeholder images:** Real brand images were not available, so Unsplash stock photos matching the design's composition were used.
+   
+##  Submission Checklist
+
+- [x] Public GitHub repository
+- [x] Live Vercel deployment URL in README
+- [x] README includes setup steps, live URL, stack, design decisions
+- [x] Figma link referenced in README
+- [x] Next.js App Router with `create-next-app`
+- [x] Tailwind CSS only — no other CSS frameworks
+- [x] No UI kits or template components used
+- [x] All images via `next/image`
+- [x] All fonts via `next/font`
+- [x] Semantic HTML throughout
+- [x] All images have meaningful `alt` text
+- [x] Keyboard-navigable buttons and links
+- [x] Responsive at 425px, 768px and 1280px+
+- [x] Clean git history with meaningful commit messages
+- [x] AI tool usage disclosed
