@@ -6,7 +6,7 @@ A pixel-perfect, fully responsive implementation of the Frontend Intern Assessme
 
 ## Live URL
 
-> **[https://YOUR-VERCEL-URL.vercel.app](https://YOUR-VERCEL-URL.vercel.app)**
+> **[https://tobams-training.vercel.app](https://YOUR-VERCEL-URL.vercel.app)**
 
 ---
 
