@@ -1,6 +1,6 @@
 export default function CapacityDevelopment() {
   return (
-    <section className="section section-white">
+    <section id="capacity-development" className="section section-white">
       <div className="grid2">
         <div>
           <h2 className="section-h2">Capacity Development</h2>

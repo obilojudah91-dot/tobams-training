@@ -1,3 +1,36 @@
+const footerGroups = {
+  services: [
+    'Sustainability Services',
+    'Strategy Planning and Implementation',
+    'Tech Talent Solutions',
+    'Training and Development',
+    'IT Consulting Services',
+    'Social Impact',
+    'Talent Recruitment',
+  ],
+  company: [
+    'About',
+    'Jobs',
+    'Projects',
+    'Our Founder',
+    'Business Model',
+    'The Team',
+    'Contact Us',
+    'Blog',
+    'FAQs',
+    'Testimonials',
+  ],
+  solutions: [
+    'Tobams Group Academy',
+    'Help a Tech Talent',
+    'Campus Ambassadors Program',
+    'Join Our Platform',
+    'Pricing',
+    'Book a Consultation',
+    'Join Our Slack Community',
+  ],
+}
+
 export default function Footer() {
   return (
     <footer>
@@ -19,54 +52,48 @@ export default function Footer() {
             development with a global perspective.
           </p>
           <div className="footer-socials">
-            <a href="#" className="social-btn" aria-label="LinkedIn">
+            <a href="#contact" className="social-btn" aria-label="LinkedIn">
               in
             </a>
-            <a href="#" className="social-btn" aria-label="Instagram">
+            <a href="#contact" className="social-btn" aria-label="Instagram">
               ig
             </a>
-            <a href="#" className="social-btn" aria-label="Twitter / X">
-              {'𝕏'}
+            <a href="#contact" className="social-btn" aria-label="Twitter / X">
+              x
             </a>
           </div>
         </div>
+
         <div className="footer-col">
           <h4>What We Do</h4>
           <ul>
-            <li><a href="#">Sustainability Services</a></li>
-            <li><a href="#">Strategy Planning and Implementation</a></li>
-            <li><a href="#">Tech Talent Solutions</a></li>
-            <li><a href="#">Training and Development</a></li>
-            <li><a href="#">IT Consulting Services</a></li>
-            <li><a href="#">Social Impact</a></li>
-            <li><a href="#">Talent Recruitment</a></li>
+            {footerGroups.services.map((item) => (
+              <li key={item}>
+                <a href="#hero">{item}</a>
+              </li>
+            ))}
           </ul>
         </div>
+
         <div className="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Our Founder</a></li>
-            <li><a href="#">Business Model</a></li>
-            <li><a href="#">The Team</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Testimonials</a></li>
+            {footerGroups.company.map((item) => (
+              <li key={item}>
+                <a href="#hero">{item}</a>
+              </li>
+            ))}
           </ul>
         </div>
+
         <div className="footer-col">
           <h4>Solution</h4>
           <ul>
-            <li><a href="#">Tobams Group Academy</a></li>
-            <li><a href="#">Help a Tech Talent</a></li>
-            <li><a href="#">Campus Ambassadors Program</a></li>
-            <li><a href="#">Join Our Platform</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Book a Consultation</a></li>
-            <li><a href="#">Join Our Slack Community</a></li>
+            {footerGroups.solutions.map((item) => (
+              <li key={item}>
+                <a href="#hero">{item}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -83,6 +110,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
+
         <div className="footer-office" style={{ paddingTop: '28px' }}>
           <div className="country">Nigeria</div>
           <p>
@@ -91,14 +119,15 @@ export default function Footer() {
             4, Muaz Close, Angwar-Rimi
           </p>
         </div>
+
         <div className="footer-contact">
           <h5>Contact Information</h5>
           <div className="footer-contact-item">
-            <span>{'✉'}</span>
+            <span>Mail</span>
             <a href="mailto:theteam@tobamsgroup.com">theteam@tobamsgroup.com</a>
           </div>
           <div className="footer-contact-item">
-            <span>{'📞'}</span>
+            <span>Call</span>
             <a href="tel:+447886600748">+447886600748</a>
           </div>
         </div>
@@ -107,9 +136,9 @@ export default function Footer() {
       <div className="footer-bottom">
         <span>Copyright &copy; Tobams Group, 2024. All rights reserved.</span>
         <div className="footer-bottom-links">
-          <a href="#">Terms and Conditions</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Cookies Policy</a>
+          <a href="#hero">Terms and Conditions</a>
+          <a href="#hero">Privacy Policy</a>
+          <a href="#hero">Cookies Policy</a>
         </div>
       </div>
     </footer>

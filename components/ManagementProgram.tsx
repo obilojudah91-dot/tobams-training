@@ -1,3 +1,10 @@
+const managementBenefits = [
+  'Enhanced Leadership Skills',
+  'Improved Employee Engagement',
+  'Stronger Organisational Culture',
+  'Sustainable Growth',
+]
+
 export default function ManagementProgram() {
   return (
     <section id="management">
@@ -20,18 +27,12 @@ export default function ManagementProgram() {
             communication, and all other essential managerial competencies for corporate organisations.
           </p>
           <div className="badge-list">
-            <div className="badge">
-              <span className="badge-icon">⚡</span> Enhanced Leadership Skills
-            </div>
-            <div className="badge">
-              <span className="badge-icon">⚡</span> Improved Employee Engagement
-            </div>
-            <div className="badge">
-              <span className="badge-icon">⚡</span> Stronger Organisational Culture
-            </div>
-            <div className="badge">
-              <span className="badge-icon">⚡</span> Sustainable Growth
-            </div>
+            {managementBenefits.map((benefit) => (
+              <div key={benefit} className="badge">
+                <span className="badge-icon">*</span>
+                {benefit}
+              </div>
+            ))}
           </div>
         </div>
       </div>

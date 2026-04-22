@@ -1,6 +1,6 @@
 export default function CooperationTraining() {
   return (
-    <section className="section section-white">
+    <section id="corporate-training" className="section section-white">
       <div className="grid2">
         <div>
           <h2 className="section-h2">Corporate Trainings</h2>

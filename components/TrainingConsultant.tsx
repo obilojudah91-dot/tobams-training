@@ -7,12 +7,12 @@ export default function TrainingConsultant() {
       <h2 className="section-h2" style={{ marginBottom: '14px' }}>
         Training The Consultant
       </h2>
-      <p className="section-p" style={{ maxWidth: '760px' }}>
+      <p className="section-p consultant-copy">
         With the help of our Training Consultants program, take a revolutionary step toward becoming a
         distinguished certified training consultant. Learn from professionals in the field, immerse
-        yourself in a thorough curriculum, and hone your training methods through interactive workshops.
-        Participating in our program will enable you to gain expertise in diverse courses while also
-        developing the abilities to mentor and encourage others in their career advancement.
+        yourself in a thorough curriculum, and hone your training methods through interactive
+        workshops. Participating in our program will enable you to gain expertise in diverse courses
+        while also developing the abilities to mentor and encourage others in their career advancement.
       </p>
       <div className="feature-grid-4">
         <div className="fg-item">
@@ -44,9 +44,9 @@ export default function TrainingConsultant() {
           </p>
         </div>
       </div>
-      <div style={{ marginTop: '20px' }}>
-        <a href="#" className="btn-learn">
-          Learn More ↗
+      <div className="consultant-action">
+        <a href="#contact" className="btn-learn">
+          Learn More
         </a>
       </div>
     </section>

@@ -1,6 +1,6 @@
 export default function IndividualTraining() {
   return (
-    <section className="section section-gray">
+    <section id="individual-training" className="section section-gray">
       <div className="grid2">
         <div>
           <img
