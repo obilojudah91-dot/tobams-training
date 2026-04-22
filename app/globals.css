@@ -948,6 +948,7 @@ footer {
 @media (max-width: 768px) {
   .navbar-top {
     padding: 12px 20px;
+    flex-wrap: wrap;
   }
 
   .navbar-links {
@@ -955,11 +956,27 @@ footer {
     gap: 20px;
   }
 
+  .nav-actions {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .btn-account,
+  .btn-assess {
+    min-height: 40px;
+  }
+
   .section, .section-sm, #lms, #transformation, #consultant, #testimonials {
     padding: 48px 20px;
   }
 
-  #lms .inner,
+  #lms .inner {
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
   .grid2,
   #transformation .inner {
     grid-template-columns: 1fr;
@@ -968,6 +985,17 @@ footer {
 
   #lms .lms-img-wrap {
     justify-content: flex-start;
+  }
+
+  #lms .lms-img-wrap,
+  #lms .lms-text {
+    width: 100%;
+  }
+
+  .grid2-img-circle {
+    width: min(260px, 100%);
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   #management .mgmt-inner {
@@ -984,6 +1012,10 @@ footer {
 
   .testi-scroll {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testi-card {
+    min-width: 0;
   }
 
   .work-together {
@@ -1009,9 +1041,32 @@ footer {
     gap: 10px;
     text-align: center;
   }
+
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 425px) {
+  .navbar-top {
+    align-items: flex-start;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .nav-actions {
+    justify-content: stretch;
+  }
+
+  .btn-account,
+  .btn-assess {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
   .testi-scroll {
     grid-template-columns: 1fr;
   }
@@ -1036,7 +1091,16 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .course-tags {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .navbar-links a {
     font-size: 12px;
+  }
+
+  .cta-band {
+    padding: 40px 20px;
   }
 }
