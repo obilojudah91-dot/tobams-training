@@ -1,9 +1,22 @@
 import type { Metadata } from 'next'
+import { Merriweather, Nunito_Sans } from 'next/font/google'
 import './globals.css'
 
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-heading',
+})
+
+const nunitoSans = Nunito_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700'],
+  variable: '--font-body',
+})
+
 export const metadata: Metadata = {
-  title: 'Training and Development – Tobams Group',
-  description: 'Training and Development – Tobams Group',
+  title: 'Training and Development - Tobams Group',
+  description: 'Training and Development - Tobams Group',
 }
 
 export default function RootLayout({
@@ -12,15 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito+Sans:wght@300;400;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${merriweather.variable} ${nunitoSans.variable}`}>
       <body>{children}</body>
     </html>
   )

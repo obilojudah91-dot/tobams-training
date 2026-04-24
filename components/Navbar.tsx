@@ -14,6 +14,17 @@ const navLinks = [
   { href: '#contact', label: 'Contact' },
 ]
 
+const quickLinks = [
+  { href: '#hero', label: 'About' },
+  { href: '#corporate-training', label: 'What We Do' },
+  { href: '#contact', label: 'Jobs' },
+  { href: '#transformation', label: 'Projects' },
+  { href: '#lms', label: 'TG Academy' },
+  { href: '#contact', label: 'Strategic Partnership' },
+  { href: '#contact', label: 'Pricing' },
+  { href: '#contact', label: 'Book a Consultation' },
+]
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState(navLinks[0].href)
@@ -83,6 +94,14 @@ export default function Navbar() {
             Take Assessment
           </a>
         </div>
+      </div>
+
+      <div className="navbar-quicklinks" aria-label="Quick links">
+        {quickLinks.map((link) => (
+          <a key={`${link.label}-${link.href}`} href={link.href}>
+            {link.label}
+          </a>
+        ))}
       </div>
 
       <div id="primary-navigation" className={`navbar-links${isOpen ? ' open' : ''}`}>

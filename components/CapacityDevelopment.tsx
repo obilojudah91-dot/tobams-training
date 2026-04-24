@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function CapacityDevelopment() {
   return (
     <section id="capacity-development" className="section section-white">
@@ -20,10 +22,12 @@ export default function CapacityDevelopment() {
           </ul>
         </div>
         <div>
-          <img
+          <Image
             className="grid2-img"
             src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=700&q=70"
             alt="Team workshop with chart presentation"
+            width={700}
+            height={467}
           />
         </div>
       </div>

@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function CooperationTraining() {
   return (
     <section id="corporate-training" className="section section-white">
@@ -19,10 +21,12 @@ export default function CooperationTraining() {
           </ul>
         </div>
         <div>
-          <img
+          <Image
             className="grid2-img"
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=70"
             alt="Corporate training session with a presenter and team"
+            width={700}
+            height={467}
           />
         </div>
       </div>

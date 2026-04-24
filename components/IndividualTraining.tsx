@@ -1,12 +1,16 @@
+import Image from 'next/image'
+
 export default function IndividualTraining() {
   return (
     <section id="individual-training" className="section section-gray">
       <div className="grid2">
         <div>
-          <img
+          <Image
             className="grid2-img"
             src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=70"
             alt="Individual focused in a one-on-one coaching session"
+            width={700}
+            height={467}
           />
         </div>
         <div>

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 const testimonials = [
@@ -67,7 +68,13 @@ export default function Testimonials() {
             <article key={testimonial.name} className="testi-slide">
               <div className="testi-card">
                 <div className="testi-head">
-                  <img className="testi-avatar" src={testimonial.avatar} alt={testimonial.name} />
+                  <Image
+                    className="testi-avatar"
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    width={44}
+                    height={44}
+                  />
                   <div>
                     <div className="testi-name">{testimonial.name}</div>
                     <div className="testi-role">{testimonial.role}</div>
@@ -95,7 +102,12 @@ export default function Testimonials() {
         </div>
 
         <div className="testi-nav">
-          <button type="button" className="testi-btn" aria-label="Previous testimonial" onClick={previous}>
+          <button
+            type="button"
+            className="testi-btn"
+            aria-label="Previous testimonial"
+            onClick={previous}
+          >
             &lt;
           </button>
           <button type="button" className="testi-btn" aria-label="Next testimonial" onClick={next}>

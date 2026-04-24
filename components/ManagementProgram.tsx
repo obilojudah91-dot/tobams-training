@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const managementBenefits = [
   'Enhanced Leadership Skills',
   'Improved Employee Engagement',
@@ -10,9 +12,11 @@ export default function ManagementProgram() {
     <section id="management">
       <div className="mgmt-inner">
         <div className="mgmt-img">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=70"
             alt="Three diverse professionals discussing in a modern office"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
         <div className="mgmt-content">

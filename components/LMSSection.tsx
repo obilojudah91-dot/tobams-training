@@ -1,12 +1,16 @@
+import Image from 'next/image'
+
 export default function LMSSection() {
   return (
     <section id="lms" className="lms-bg">
       <div className="inner">
         <div className="lms-img-wrap">
-          <img
+          <Image
             className="grid2-img-circle"
             src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=70"
             alt="Two professionals smiling in a bright office"
+            width={500}
+            height={500}
           />
         </div>
         <div className="lms-text">
@@ -34,7 +38,7 @@ export default function LMSSection() {
             <span className="course-tag">Business Model</span>
           </div>
           <a href="#" className="btn-learn">
-            Learn More ↗
+            Learn More -&gt;
           </a>
         </div>
       </div>

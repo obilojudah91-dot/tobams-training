@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const features = [
   'Strategic Career Guidance',
   'Leadership Development',
@@ -35,10 +37,12 @@ export default function TransformationHub() {
           </a>
         </div>
         <div>
-          <img
+          <Image
             className="transformation-image"
             src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=70"
             alt="CEO Jite Newton presenting to a group"
+            width={700}
+            height={510}
           />
         </div>
       </div>
